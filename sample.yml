@@ -1,0 +1,7 @@
+#basic echo command
+- name: Demo playbook
+  host: all
+  tasks: 
+    -name: print hello world
+    ansible.builtin.debug:
+    msg: Hello keerthi
