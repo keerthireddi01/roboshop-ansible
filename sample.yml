@@ -1,4 +1,3 @@
-#basic echo command
 - name: Demo playbook
   hosts: all
   tasks: 
