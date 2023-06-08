@@ -1,0 +1,10 @@
+- name: print a text
+  hostes: all
+  tasks:
+    - name: print hellow lerf
+      ansible.builtin.debug:
+       msg: hello worls
+
+    - name: get anothr file
+      ansible.builtin.include_tasks: 
+       file: sample.yaml   
