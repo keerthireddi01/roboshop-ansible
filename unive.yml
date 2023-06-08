@@ -1,5 +1,5 @@
 - name: print a text
-  hostes: all
+  hosts: all
   tasks:
     - name: print hellow lerf
       ansible.builtin.debug:
