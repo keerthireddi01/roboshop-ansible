@@ -6,22 +6,26 @@
      ansible.builtin.yum:
       name: nginx
       state: latest
+
    - name: Remove directory
      ansible.builtin.file:
       path: /usr/share/nginx/html
       state: absent   
+
    - name: create directory
      ansible.builtin.file:
       path: /usr/share/nginx/html
       state: directory  
+
    - name: download and extract content
      ansible.builtin.unarchive:
       src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
       dest: /usr/share/nginx/html
       remote_src: yes
+
    - name: Copy roboshop conf
      ansible.builtin.copy:
-      src: /home/centos/roboshop-ansible/roboshop.conf
+      src: roboshop.conf
       dest: /etc/nginx/default.d/roboshop.conf  
   
    - name: start nginx service
