@@ -8,8 +8,8 @@
     name: mongodb-org-shell
     state: installed
 
--name: load mongodb schema
- ansible.builtin.shell: mongo --host mongodb-dev.keedev.store </app/schema/{{ component }}.js
+- name: load mongodb schema
+  ansible.builtin.shell: mongo --host mongodb-dev.keedev.store </app/schema/{{ component }}.js
        
         
 
