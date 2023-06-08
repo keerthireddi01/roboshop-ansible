@@ -1,9 +1,0 @@
-#- name: Demo playbook
-  #hosts: web
-
-  #tasks:  
-  - name: print hello world
-    ansible.builtin.debug: 
-      msg: Hello keerthi
-
-   
