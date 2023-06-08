@@ -4,6 +4,6 @@
     state: installed
 
 - name: load schema
-  ansible.builtin.shell: mysql --host mongodb-dev.keedev.store </app/schema/{{ component }}.js
+  ansible.builtin.shell: mysql --host mongodb-dev.keedev.store </app/schema/{{ component }}.sql
        
       
