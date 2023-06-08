@@ -2,23 +2,23 @@
   hosts: all
   tasks:
     - name: copy mongodb repo files
-       ansible.builtin.copy:
+       ansible.builtin.copy: 
         src: mongodb
         dest: /etc/yum.repos.d/mongodb.repo
 
     - name: install mongodb server
-       ansible.builtin.yum:
+       ansible.builtin.yum: 
         name: mongodb-org
         state: latest
 
     - name: update mongodb listen address
-       ansible.builtin.replace:
+       ansible.builtin.replace: 
         path: /etc/mongod.conf
         regexp: '127.0.0.1'
         replace: '0.0.0.0'
 
     - name:  start mongodb service
-       ansible.builtin.systemd:
+       ansible.builtin.systemd: 
         state: restarted
         name: mongodb
         enabled: yes
