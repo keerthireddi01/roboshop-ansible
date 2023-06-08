@@ -1,0 +1,21 @@
+- name: copy mongodb repo files
+  ansible.builtin.copy:
+    src: mongodb.repo
+    dest: /etc/yum.repos.d/{{ component }}.repo
+
+- name: Install mongodb client
+  ansible.builtin.yum:
+    name: mongodb-org-shell
+    state: installed
+
+-name: load mongodb schema
+ ansible.builtin.shell: mongo --host mongodb-dev.keedev.store </app/schema/{{ component }}.js
+       
+        
+
+ 
+ #schema
+ echo -e "${color} loading schema ${nocolor}"
+ mongo --host mongodb-dev.keedev.store <${app_path}/schema/$component.js  &>>${log_file}
+ stat_check $? 
+}
