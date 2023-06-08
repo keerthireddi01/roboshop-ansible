@@ -8,5 +8,5 @@
    name: "{{ component }}"
    sate: restarted
    enabled: yes
-   daemon_reexec: true
+   daemon-reexec: true
 
