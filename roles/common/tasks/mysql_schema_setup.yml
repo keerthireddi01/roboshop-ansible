@@ -1,9 +1,9 @@
-- name: Install mongodb client
+- name: Install mysql client
   ansible.builtin.yum:
     name: mysql
     state: installed
 
 - name: load schema
-  ansible.builtin.shell: mysql --host mongodb-dev.keedev.store </app/schema/{{ component }}.sql
+  ansible.builtin.shell: mysql --host mysql-dev.keedev.store </app/schema/{{ component }}.sql
        
       
