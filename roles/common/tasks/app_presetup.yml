@@ -14,7 +14,7 @@
    state: directory
 
 - name:  download and extract app content
-  ansible.builtin.unarhive:
+  ansible.builtin.unarchive:
     src: https://roboshop-artifacts.s3.amazonaws.com/{{ component }}.zip
     dest: /app
     remote_src: yes
