@@ -1,5 +1,5 @@
   - name: Install Nginx server
-     ansible.builtin.yum:
+    ansible.builtin.yum:
       name: nginx
       state: latest
 
